@@ -38,12 +38,10 @@ void AMovingPlatform::MovePlatform(float DeltaTime)
 	SetActorLocation (CurrentLocation);	
 	}
 }
-
 void AMovingPlatform::RotatePlatform(float DeltaTime)
 {
 	AddActorLocalRotation(RotationVelocity * DeltaTime);
 }
-
 bool AMovingPlatform::ShouldPlatformReturn() const 
 {
 	return GetDistanceMoved() > MovedDistance;
